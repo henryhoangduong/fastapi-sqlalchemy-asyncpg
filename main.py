@@ -8,6 +8,7 @@ from redis_ import get_redis
 from config import settings as global_settings
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from exception_handlers.registry import register_exception_handlers
 
 logger = Rotoger().get_logger()
 
@@ -44,6 +45,7 @@ def create_app() -> FastAPI:
         version="0.20.0",
         lifespan=lifespan
     )
+    register_exception_handlers(app)
 
     @app.get("/index", response_class=HTMLResponse)
     def get_index(request: Request):
