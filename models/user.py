@@ -5,9 +5,10 @@ import bcrypt
 from pydantic import SecretStr
 from sqlalchemy import Column, LargeBinary, String, select
 from sqlalchemy.dialects.postgresql import UUID
-from models.base import Base
-from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import Mapped, mapped_column
+
+from models.base import Base
 
 
 class User(Base):

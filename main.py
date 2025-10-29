@@ -3,12 +3,13 @@ from pathlib import Path
 
 import asyncpg
 from fastapi import Depends, FastAPI, Request
-from rotoger import Rotoger
-from redis_ import get_redis
-from config import settings as global_settings
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from rotoger import Rotoger
+
+from config import settings as global_settings
 from exception_handlers.registry import register_exception_handlers
+from redis_ import get_redis
 
 logger = Rotoger().get_logger()
 

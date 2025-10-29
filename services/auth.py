@@ -1,10 +1,13 @@
 import time
+
 import jwt
-from fastapi import Request, HTTPException
+from fastapi import HTTPException, Request
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from rotoger import Rotoger
+
 from config import settings as global_settings
 from models.user import User
+
 logger = Rotoger().get_logger()
 
 

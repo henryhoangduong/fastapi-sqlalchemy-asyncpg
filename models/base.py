@@ -1,4 +1,5 @@
 from typing import Any
+
 from asyncpg import UniqueViolationError
 from fastapi import HTTPException, status
 from rotoger import Rotoger
