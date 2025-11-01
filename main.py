@@ -7,6 +7,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from rotoger import Rotoger
 
+from api.user import router as user_router
 from config import settings as global_settings
 from exception_handlers.registry import register_exception_handlers
 from redis_ import get_redis
@@ -51,6 +52,7 @@ def create_app() -> FastAPI:
     @app.get("/index", response_class=HTMLResponse)
     def get_index(request: Request):
         return templates.TemplateResponse("index.html", {"request": request})
+    app.include_router(user_router)
 
     return app
 

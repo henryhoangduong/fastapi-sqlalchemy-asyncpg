@@ -1,0 +1,5 @@
+{"idle_size":5,"event":"Postgres pool created","level":"info","timestamp":"2025-11-01T14:35:55.483301Z"}
+{"event":"Creating user: email='john@domain.com' first_name='John' last_name='Doe' password=SecretStr('**********')","level":"info","timestamp":"2025-11-01T14:36:36.178584Z"}
+{"event":"Database-related error: TypeError(\"checkpw() missing 2 required positional arguments: 'password' and 'hashed_password'\")","level":"error","timestamp":"2025-11-01T14:36:36.180207Z"}
+{"event":"Creating user: email='john@domain.com' first_name='John' last_name='Doe' password=SecretStr('**********')","level":"info","timestamp":"2025-11-01T14:37:20.018424Z"}
+{"event":"Database-related error: TypeError(\"checkpw() missing 2 required positional arguments: 'password' and 'hashed_password'\")","level":"error","timestamp":"2025-11-01T14:37:20.020487Z"}

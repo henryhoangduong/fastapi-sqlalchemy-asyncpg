@@ -1,0 +1,5 @@
+{"idle_size":5,"event":"Postgres pool created","level":"info","timestamp":"2025-11-01T14:44:26.561256Z"}
+{"event":"Creating user: email='john@domain.com' first_name='John' last_name='Doe' password=SecretStr('**********')","level":"info","timestamp":"2025-11-01T14:45:48.502466Z"}
+{"event":"Database-related error: ConnectionError('Error 8 connecting to redis:6379. nodename nor servname provided, or not known.')","level":"error","timestamp":"2025-11-01T14:45:49.022310Z"}
+{"event":"Creating user: email='john@domain.com' first_name='John' last_name='Doe' password=SecretStr('**********')","level":"info","timestamp":"2025-11-01T14:46:12.029027Z"}
+{"event":"Database-related error: ConnectionError('Error 8 connecting to redis:6379. nodename nor servname provided, or not known.')","level":"error","timestamp":"2025-11-01T14:46:12.301880Z"}

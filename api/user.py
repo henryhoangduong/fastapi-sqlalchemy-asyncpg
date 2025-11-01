@@ -1,16 +1,19 @@
 from typing import Annotated
+
 from fastapi import APIRouter, Depends, Form, HTTPException, Request, status
 from rotoger import Rotoger
 from sqlalchemy.ext.asyncio import AsyncSession
-from models.user import User
-from schemas.user import UserSchema, TokenResponse, UserLogin
+
 from database import get_db
+from models.user import User
+from schemas.user import TokenResponse, UserLogin, UserSchema, UserResponse
 from services.auth import create_access_token
+
 router = APIRouter(prefix="/v1/user")
 logger = Rotoger().get_logger()
 
 
-@router.post("/", status_code=status.HTTP_200_OK, response_model=User)
+@router.post("/", status_code=status.HTTP_200_OK, response_model=UserResponse)
 async def create_user(
     payload: UserSchema,
     request: Request,

@@ -1,0 +1,2 @@
+{"idle_size":5,"event":"Postgres pool created","level":"info","timestamp":"2025-11-01T14:57:10.971613Z"}
+{"event":"Creating user: email='john@domain.com' first_name='John' last_name='Doe' password=SecretStr('**********')","level":"info","timestamp":"2025-11-01T14:57:19.086895Z"}

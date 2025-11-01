@@ -3,6 +3,7 @@ from sqlalchemy import (Column, ForeignKeyConstraint, Integer,
                         UniqueConstraint, select)
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from models.base import Base
 
 
