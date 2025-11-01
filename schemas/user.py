@@ -41,3 +41,11 @@ class UserLogin(BaseModel):
         description="User's password",
         examples=["@SuperSecret123"],
     )
+
+
+class TokenResponse(BaseModel):
+    access_token: str = Field(
+        title="User’s access token", description="User’s access token"
+    )
+    token_type: str = Field(title="User’s token type",
+                            description="User’s token type")
