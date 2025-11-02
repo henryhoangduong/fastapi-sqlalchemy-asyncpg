@@ -7,6 +7,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from rotoger import Rotoger
 
+from api.shakespeare import router as shakespeare_router
 from api.user import router as user_router
 from config import settings as global_settings
 from exception_handlers.registry import register_exception_handlers
@@ -53,6 +54,7 @@ def create_app() -> FastAPI:
     def get_index(request: Request):
         return templates.TemplateResponse("index.html", {"request": request})
     app.include_router(user_router)
+    app.include_router(shakespeare_router)
 
     return app
 
